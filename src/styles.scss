@@ -1,0 +1,25 @@
+@import "color";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+ box-sizing: border-box;
+}
+
+*, *:before, *:after {
+ box-sizing: inherit;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background: no-repeat center bottom url("../../img/town.png");
+  .App-title {
+    font-size: 20px;
+    color: $web-primary-color;
+    margin: 16px;
+  }
+}

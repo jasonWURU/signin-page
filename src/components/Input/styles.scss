@@ -1,0 +1,58 @@
+@import "../../color";
+@import "../../icon";
+
+.Input {
+  position: relative;
+  ~ .Input{
+    margin-top: 16px;
+  }
+  .Input-text{
+    position: absolute;
+    border-left: 1px solid $web-border-color;
+    padding-left: 12px;
+    height: 24px;
+    line-height: 24px;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .Ipunt-icon {
+    position: absolute;
+    width: 30px;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    color: $web-border-color;
+  }
+  label {
+    position: absolute;
+    display: none;
+    font-size: 8px;
+    border-radius: 3px;
+    padding: 4px;
+    color: #fff;
+    text-align: center;
+    background-color: $web-primary-color;
+    top: -12px;
+    left: 16px;
+    z-index: 1;
+  }
+  input {
+    width: 100%;
+    height: 46px;
+    border: 2px solid $web-border-color;
+    border-radius: 5px;
+    padding: 8px 8px 8px 56px;
+
+    &:focus {
+      outline: none;
+      border: 2px solid $web-primary-color;
+      + label {
+        display: inherit;
+      }
+    }
+    &.Input-error {
+      border: 2px solid red;
+    }
+  }
+}

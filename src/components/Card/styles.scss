@@ -1,0 +1,53 @@
+@import "../../color";
+@import "../../icon";
+@import "../../media";
+
+$base-color: $web-border-color;
+$checked-color: $web-secondary-color;
+
+@mixin card-size-mid {
+  width: 122px;
+  height: 122px;
+}
+
+.Card {
+  display: inline-block;
+  position: relative;
+  border: 2px solid $base-color;
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 24px;
+  @include pc-width{
+    margin: 8px;
+  }
+  @include card-size-mid;
+  &.Card-checked {
+    border-color: $checked-color;
+    &::before {
+      content:"";
+      @include circle-icon;
+      display: inline-block;
+      position: absolute;
+      bottom: -8px;
+      right: -10px;
+      background-color: $web-primary-color;
+      box-shadow:1px 1px 2px 2px $checked-color;
+    }
+    &::after {
+      content:"";
+      @include check-mark;
+      border-color: #fff;
+      display: inline-block;
+      position: absolute;
+      bottom: -0.5px;
+      right: -2px;
+    }
+  }
+  svg {
+    width: 67px;
+    height: 80px;
+  }
+  .Card-text {
+    margin-top: 4px;
+  }
+}

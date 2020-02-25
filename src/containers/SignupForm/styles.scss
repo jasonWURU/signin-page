@@ -1,0 +1,44 @@
+@import "../../color";
+@import "../../media";
+
+
+.SignupForm {
+  font-size: 12px;
+  width: 280px;
+  //電腦版
+  @include pc-width{
+    width: 600px;
+  }
+  @include phone-width{
+    width: 280px;
+  }
+  text-align: center;
+  margin: 0 auto;
+  .SignupForm-type {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include pc-width{
+      display: block;
+    }
+  }
+  .SignupForm-text {
+    color: $web-text-color;
+    margin-bottom: 24px;
+    line-height: 20px;
+  }
+  .SignupForm-text-error {
+    color: red;
+  }
+  .SignupForm-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    color: $web-text-color;
+  }
+  a {
+    color: $web-primary-color;
+    text-decoration: none;
+  }
+}
